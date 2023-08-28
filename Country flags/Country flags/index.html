@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>My Flags 🏳️‍🌈</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="my-5 text-center">Bandeira dos Países 🏳️</h1>
+
+    <main class="row">
+
+    </main>
+    <div class="dropdown">
+      <select id="country-list">
+        <option value="none" selected disabled hidden>Escolha um país</option>
+        <option value="Afeganistão">Afeganistão</option>
+        <option value="Alemanha">Alemanha</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Antártica">Antártica</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Canada">Canada</option>
+        <option value="Dinamarca">Dinamarca</option>
+        <option value="Egito">Egito</option>
+        <option value="Emirado Árabes Unidos">Emirado Árabes Unidos</option>
+        <option value="Espanha">Espanha</option>
+        <option value="EUA">EUA</option>
+        <option value="França">França</option>
+        <option value="Germania">Germania</option>
+        <option value="India">India</option>
+        <option value="Japão">Japão</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Nova Zelândia">Nova Zelândia</option>
+        <option value="Russia">Russia</option>
+
+
+
+        <script>
+          const flags = {
+            "Afeganistão": "https://flagcdn.com/w320/af.png",
+            "Andorra": "https://flagcdn.com/w320/ad.png",
+            "Antártica": "https://flagcdn.com/w320/aq.png",
+            "Argentina": "https://flagcdn.com/w320/ar.png",
+            "Brasil": "https://flagcdn.com/w320/br.png",
+            "Canada": "https://flagcdn.com/w320/ca.png",
+            "Dinamarca": "https://flagcdn.com/w320/dk.png",
+            "Egito": "https://flagcdn.com/w320/eg.png",
+            "Emirado Árabes Unidos": "https://flagcdn.com/w320/ae.png",
+            "França": "https://flagcdn.com/w320/fr.png",
+            "Alemanha": "https://flagcdn.com/w320/de.png",
+            "India": "https://flagcdn.com/w320/in.png",
+            "Japão": "https://flagcdn.com/w320/jp.png",
+            "Mexico": "https://flagcdn.com/w320/mx.png",
+            "Nigeria": "https://flagcdn.com/w320/ng.png",
+            "Russia": "https://flagcdn.com/w320/ru.png",
+            "Espanha": "https://flagcdn.com/w320/es.png",
+            "Nova Zelândia": "https://flagcdn.com/w320/gb.png",
+            "EUA": "https://flagcdn.com/w320/us.png"
+          };
+          const countryList = document.querySelector("#country-list");
+          const flagImg = document.createElement("img");
+          const flagContainer = document.querySelector(".row");
+
+          countryList.addEventListener("change", function () {
+            const selectedCountry = countryList.value;
+            const flagUrl = flags[selectedCountry];
+
+            flagImg.src = flagUrl;
+            flagImg.alt = selectedCountry + " flag";
+
+            flagContainer.innerHTML = "";
+            flagContainer.appendChild(flagImg);
+          });
+
+        </script>
+    </div>
+</body>

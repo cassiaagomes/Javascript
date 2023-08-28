@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Educa Ambiental</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/43d60e188b.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="center1">
+        <div class="logo"><img src="assets/imgs/logo.png"></div>
+        <div class="menu">
+          <a href="">Home</a>
+          <a href="solos.html">Solos</a>
+          <a href="jogo.html">Jogos</a>
+          <a href="">Sobre</a>
+        </div>
+      </div>
+    </header>
+    <section class="sobre">
+      <div class="extras">
+      </div>
+      <div class="center">
+        <div class="texto-sobre">
+          <h1>Plante uma semente na<br /><span style="color: #00c240;">Educação!</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra hendrerit tincidunt.<br>Cras
+            non
+            nulla tortor. Maecenas et quam tristique, volutpat tortor sit amet, viverra sapien. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia curae;</br><br> Nam felis augue, aliquam id dui
+            sit
+            amet, facilisis mollis lacus. Mauris nec velit eleifend, tincidunt urna et, congue dolor. Maecenas sit amet
+            nunc elit. Praesent tempor nisi metus, nec aliquet justo dictum in.</br></p>
+          <button onclick="abrirModal()">Saiba mais</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  </div>
+  <footer>
+    <section class="footer-content">
+
+      <section class="social">
+        <h1>REDES SOCIAIS</h1>
+        <ul>
+          <li>
+            <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section class="copyright">
+      <span>@2023 feito por Cássia gomes <3 </span>
+    </section>
+  </footer>
+  <div class="janela-modal" id='janela-modal'>
+    <div class="modal">
+      <button class="fechar" id="fechar">X</button>
+      <h1>NOSSO OBJETIVO</h1>
+      <p><br>A ausência da educação ambiental de qualidade nas escolas pode ocasionar um grande déficit em
+        relação ao cuidado dos solos. Atualmente vivenciamos inúmeros impactos nos solos de todo o Brasil e esta
+        situação está direta e indiretamente ligada ao desgaste erosivo do solo.</br> <br>Este site vem com a
+        tentativa
+        conscientizar e de minimizar a curto prazo os problemas causados
+        ao solo e a longo prazo, buscando modificar as atitudes da população em relação com os seus cuidados para o
+        meio ambiente.</br></p>
+    </div>
+  </div>
+  <div class="botão">
+    <button onclick="openModal()" class="button1">+</button>
+  </div>
+  <div class="window-modal1" id='window-modal1'>
+    <div class="wmodal1">
+      <button class="close" id="close">X</button>
+      <h2>FALE CONOSCO</h3>
+        <form id="form" class="form">
+          <div class="form-control">
+            <label for="username">Nome</label>
+            <input type="text" id="username" name="name" placeholder="Digite o seu nome...">
+            <small>Ok!</small>
+          </div>
+
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Digite o seu email...">
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="telephone">Telefone</label>
+            <input type="text" id="telephone" name="telephone" placeholder="Digite o seu telefone...">
+            <small>Mensagem de erro</small>
+          </div>
+
+          <div class="form-control">
+            <label for="message">Mensagem </label>
+            <input type="text" id="message" name="message" placeholder="Digite a sua mensagem...">
+            <small>Ok!</small>
+          </div>
+
+          <button id="meuBotao" type="submit">Enviar</button>
+        </form>
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+  <script type="module" src="js/main.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/verification.js"></script>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

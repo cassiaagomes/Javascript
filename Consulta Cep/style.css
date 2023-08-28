@@ -1,0 +1,100 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+}
+
+body {
+  background: #f1f1f1;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 20%;
+  min-height: 580px;
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  position: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  margin-left: 35%;
+  border-radius: 57px;
+  background: #ffffff;
+  box-shadow: 14px 14px 30px #999999, -14px -14px 30px #ffffff;
+}
+
+.container h2 {
+  justify-content: center;
+  align-items: center;
+  margin-left: 115px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 13em;
+  border-radius: 1rem;
+  color: #000000;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 75px;
+}
+
+.input-wrapper input:focus {
+  outline-color: #000000;
+}
+
+.input-wrapper.success input {
+  border: 2px solid green;
+}
+
+.input-wrapper.error input {
+  border: 2px solid red;
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  animation: shake 0.4s ease-in-out;
+}

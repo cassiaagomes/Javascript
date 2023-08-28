@@ -1,0 +1,515 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /*overflow-y: hidden;*/
+  overflow-x: hidden;
+}
+
+.container {
+  height: 80%;
+  /*overflow-y: hidden;*/
+  overflow-x: hidden;
+  background-image: url('assets/imgs/jardim.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+header {
+  height: 60px;
+  padding: 15px 0;
+  background-color: #0c8835;
+  box-shadow: inset 29px 29px 58px #d4af37,
+    inset -29px -29px 58px #017143;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  margin-bottom: 110px;
+  /* aumenta a margem inferior do header */
+  position: relative;
+  /* adicionado para posicionar o menu corretamente */
+
+}
+
+
+.logo img {
+  width: 7.5%;
+  height: auto;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px 2% 0;
+  /* adicionado */
+}
+
+.center1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2%;
+  position: relative;
+  /* adicionado */
+}
+
+
+.menu {
+  position: absolute;
+  /* adicionado */
+  right: 0;
+  /* adicionado */
+  top: 50%;
+  /* adicionado */
+  transform: translateY(-50%);
+  /* adicionado */
+  text-align: right;
+  margin-right: 20px;
+  z-index: 1;
+  /* define a ordem de empilhamento do menu */
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+section.sobre {
+  height: calc(100% - 200px);
+  position: relative;
+}
+
+
+
+.extras {
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  background-image: url("assets/imgs/plantinha.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.texto-sobre h1 {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.texto-sobre p {
+  margin: 20px 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 800px;
+}
+
+.texto-sobre button {
+  border: 0;
+  background-color: #0c8835;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: inset 9px 9px 14px #017143,
+    inset -9px -9px 14px #d4af37;
+}
+
+.button2 {
+  border: none;
+  font-size: 16px;
+  color: #000000;
+  padding: 8px 16px;
+  background-color: #075323;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button2:hover {
+  background: #ffffff;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #0c8835;
+  box-shadow: inset 9px 9px 14px #0c8835,
+    inset -9px -9px 14px #d4af37;
+}
+
+footer .footer-content {
+  text-align: center;
+  display: flex;
+  padding: 20px 15% 10px;
+  justify-content: center;
+  position: center;
+}
+
+footer .footer-content>section {
+  flex-basis: calc(100% / 3);
+}
+
+footer section.social ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer section.social a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 15px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer section.copyright {
+  color: #ffffff;
+  background-color: #0c8835;
+  box-shadow: inset 9px 9px 14px #0c8835,
+    inset -9px -9px 14px #d4af37;
+  padding: 15px;
+  text-align: center;
+}
+
+footer section.social a:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+footer section.social h1 {
+  color: #ffffff;
+}
+
+.janela-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #00000080;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin: auto;
+}
+
+.janela-modal.abrir {
+  display: flex;
+}
+
+.modal {
+  width: 60%;
+  min-width: 450px;
+  min-height: 200px;
+  background-color: #ffffff96;
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.fechar {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 5%;
+  height: 6vh;
+  border-radius: 90px;
+  border: 0;
+  background-color: #d4af37;
+  color: #ffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.window-modal1 {
+  width: 28%;
+  /* Defina a largura da sua janela modal sidebar */
+  height: 90vh;
+  position: fixed;
+  border-radius: 20px;
+  top: 0;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  margin: auto;
+}
+
+.window-modal1.abrir {
+  display: flex;
+}
+
+.wmodal1 {
+  width: 80%;
+  /* Ajuste a largura do conteúdo da sua modal sidebar */
+  min-height: 580px;
+  /* Defina a altura mínima do conteúdo da sua modal sidebar */
+  background-color: #cce5f796;
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  position: relative;
+  right: auto;
+  left: auto;
+  margin-right: 0;
+  margin-left: auto;
+  border-radius: 20px;
+}
+
+.wmodal1 h2 {
+  color: #fdfdfd;
+  text-shadow: 3px 5px #636363ee;
+}
+
+.form {
+  padding: 5px;
+}
+
+.form-control {
+  margin-bottom: 5px;
+  padding: 5px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  padding: 5px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: -12px;
+  left: 8px;
+  visibility: hidden;
+  font-size: 12px;
+}
+
+.form button {
+  background-color: #d4af37;
+  border: 2px solid #d4af50;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 7px;
+  margin-top: 15px;
+}
+
+/* error and success */
+.form-control.success input {
+  border-color: #0c8835;
+}
+
+.form-control.success small {
+  visibility: visible;
+  color: #0c8835;
+}
+
+.form-control.error input {
+  border-color: #c01c28;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #c01c28;
+}
+
+.close {
+  position: absolute;
+  top: -10px;
+  /* Ajuste a distância do topo conforme necessário */
+  left: 10px;
+  /* Defina a distância da esquerda para 10px */
+  width: 10%;
+  height: 6vh;
+  border-radius: 180px;
+  border: 0;
+  background-color: #d4af37;
+  color: #ffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #0c8835;
+  box-shadow: inset 9px 9px 14px #017143,
+    inset -9px -9px 14px #d4af37;
+  border: solid 1px #ffff;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
+button1:hover {
+  background-color: #d4af37;
+  color: #ffff;
+  transition: 0.5s;
+}
+
+.form-floating input.form-control,
+.form-floating textarea.form-control {
+  font-size: 1.5rem;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  border-width: 1px;
+}
+
+.service-description {
+  background-color: #017143;
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  position: center;
+  border-radius: 80px;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.service-description h1 {
+  font-size: 2em;
+  color: #ffff;
+  text-shadow: 3px 2px #0c8835;
+  text-decoration: none;
+}
+
+.service-description a {
+  color: #ffff;
+  text-shadow: 3px 5px #0c8835;
+  text-decoration: none;
+}
+
+main {
+  color: #333;
+  padding: 3em;
+  display: flex;
+  flex-flow: wrap;
+  text-align: center;
+}
+
+main .service-description {
+  flex-basis: 100%;
+  margin-bottom: 100px;
+}
+
+main .service-description h1 {
+  font-size: 3em;
+  color: #ffff;
+  text-shadow: 3px 5px #636363ee;
+}
+
+main .service-description a {
+  color: #ffff;
+  text-shadow: 3px 5px #636363ee;
+}
+
+main .service-description p {
+  color: #777;
+  font-style: italic;
+}
+
+main .service-description {
+  flex-basis: 100%;
+  margin-bottom: 100px;
+}
+
+
+.imagens-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imagem-container {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  margin-top: 2.5%;
+  margin-left: 3%;
+  /* Ajuste o valor conforme necessário */
+}
+
+.imagem {
+  border-radius: 400px;
+  box-shadow: 2px 2px 18px #017143;
+  width: 100%;
+  height: auto;
+  transition: box-shadow 0.4s ease-in-out, margin-top 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+
+.imagem:hover {
+  box-shadow: 2px 2px 18px #f9c006;
+  transition: box-shadow 0.4s ease-in-out, margin-top 0.4s ease-in-out;
+  margin-top: -18px;
+}
+
+.imagem-container p {
+  color: #008509ff;
+  margin-top: 3%;
+  font-size: 20px;
+  text-shadow: 2px 2px 18px #005706ff;
+}
